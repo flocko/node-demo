@@ -1,0 +1,30 @@
+{
+  "name": "node-demo",
+  "version": "0.0.0",
+  "description": "Just the first app",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flocko/node-demo.git"
+  },
+  "keywords": [
+    "example",
+    "demo",
+    "heroku"
+  ],
+  "author": "flocko",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/flocko/node-demo/issues"
+  },
+  "dependencies": {
+    "logfmt": "~1.1.2",
+    "express": "~4.1.1"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}

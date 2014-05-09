@@ -14,19 +14,26 @@ app.listen(port, function() {
   console.log("Listening on " + port);
 });
 
-app.use(express.static(__dirname + '/public'));
-
-//JIRA request
 var Client = require('node-rest-client').Client;
-
-// configure basic http auth for every request
-
-var options_auth ={user:"martin.kropf", password:""};
-
+var options_auth ={user:"martin.kropf", password:"26d4-j27"};
 client = new Client(options_auth);
 
-client.get("https://blanc-noir.atlassian.net/rest/api/latest/project?jql=project%20%3D%20MAN%20AND%20resolution%20%3D%20Unresolved%20AND%20priority%20%3D%20Blocker%20ORDER%20BY%20key%20DESC", 
-            function(data, response){
 
-						    
+
+app.use(express.static(__dirname + '/public'));
+
+// routes ======================================================================
+
+// api ---------------------------------------------------------------------
+// get all todos
+app.get('/api/jira', function(req, res) {
+	client.get("https://blanc-noir.atlassian.net/rest/api/latest/search?jql=project%20%3D%20MAN%20AND%20priority%20%3D%20Trivial%20AND%20resolution%20%3D%20Unresolved%20ORDER%20BY%20key%20DESC", 
+        function(data, response){
+        	res.json(data);
+		});	    
+});
+
+	// application -------------------------------------------------------------
+app.get('*', function(req, res) {
+	res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
 });

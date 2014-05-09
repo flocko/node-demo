@@ -23,7 +23,9 @@
   "dependencies": {
     "logfmt": "~1.1.2",
     "express": "~4.1.1",
-    "mongoose": "~3.6.2"
+    "mongoose": "~3.6.2",
+    "body-parser":"*"
+
   },
   "engines": {
     "node": "0.10.x"

@@ -14,3 +14,18 @@ app.listen(port, function() {
   console.log("Listening on " + port);
 });
 
+
+//JIRA request
+var Client = require('node-rest-client').Client;
+
+// configure basic http auth for every request
+var options_auth={user:"martin.kropf",password:"26d4-j27"};
+
+client = new Client(options_auth);
+
+client.get("https://blanc-noir.atlassian.net/rest/api/latest/project?jql=project%20%3D%20MAN%20AND%20resolution%20%3D%20Unresolved%20AND%20priority%20%3D%20Blocker%20ORDER%20BY%20key%20DESC", 
+            function(data, response){
+
+           	//Data contains parsed response
+			    
+});

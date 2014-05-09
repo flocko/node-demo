@@ -20,7 +20,7 @@ app.listen(port, function() {
 var Client = require('node-rest-client').Client;
 
 // configure basic http auth for every request
-var options_auth={user:"martin.kropf",password:"26d4-j27"};
+
 
 client = new Client(options_auth);
 

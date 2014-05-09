@@ -14,6 +14,7 @@ app.listen(port, function() {
   console.log("Listening on " + port);
 });
 
+//app.use(express, static(__dirname + '/public'));
 
 //JIRA request
 var Client = require('node-rest-client').Client;

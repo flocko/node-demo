@@ -15,7 +15,7 @@
     "demo",
     "heroku"
   ],
-  "author": "flocko",
+  "author": "mkropf flocko",
   "license": "BSD",
   "bugs": {
     "url": "https://github.com/flocko/node-demo/issues"
@@ -24,10 +24,19 @@
     "logfmt": "~1.1.2",
     "express": "~4.1.1",
     "mongoose": "~3.6.2",
-    "body-parser":"*"
-
+    "body-parser": "*",
+    "node-rest-client": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-watch": "*",
+    "matchdep": "*"
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "devDependencies": {
+    "grunt-parallel": "~0.3.1"
   }
 }

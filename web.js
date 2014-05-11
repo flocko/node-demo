@@ -18,7 +18,7 @@ app.listen(port, function() {
 });
 
 var Client = require('node-rest-client').Client;
-var options_auth ={user:"martin.kropf", password:"26d4-j27"};
+var options_auth ={user:"martin.kropf", password:"****"};
 client = new Client(options_auth);
 
 
